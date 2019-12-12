@@ -19,18 +19,32 @@ final class Advent01Test extends TestCase
 		    Advent01::fuelFor(14)
 	    );
     }
-    public function testFuelFor1969Is654(): void
+    public function testFuelFor1969Is966(): void
     {
 	    $this->assertEquals(
-		    654,
+		    966,
 		    Advent01::fuelFor(1969)
 	    );
     }
-    public function testFuelFor100756Is33583(): void
+    public function testFuelFor100756Is50346(): void
     {
 	    $this->assertEquals(
-		    33583,
+		    50346,
 		    Advent01::fuelFor(100756)
+	    );
+    }
+    public function testTotalFuelFor12And14Is4(): void
+    {
+	    $this->assertEquals(
+		    4,
+		    Advent01::totalFuel([12, 14])
+	    );
+    }
+    public function testTotalFuelFor4Examples(): void
+    {
+	    $this->assertEquals(
+		    4 + 966 + 50346,
+		    Advent01::totalFuel([12, 14, 1969, 100756])
 	    );
     }
 }
